@@ -41,14 +41,14 @@ const useStyles = makeStyles((theme) => ({
 const Header = (props) => {
     const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
-    console.log(props);
+    // console.log(props);
     const {title,description,publishedAt,urlToImage}=props.article;
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
 
     return (
-        <Card style={{float:'left',margin:'5px',backgroundColor:'gray'}} className={classes.root}>
+        <Card style={{margin:'5px',backgroundColor:'gray'}} className={classes.root}>
       <CardHeader style={{height:'120px'}}
         avatar={
           <Avatar aria-label="recipe" className={classes.avatar}>

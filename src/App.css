@@ -1,3 +1,8 @@
 .news-color{
-  background-color:gray;
+  background-color:rgb(190, 190, 190);
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  /* border: 2px solid red; */
 }
