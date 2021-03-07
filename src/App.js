@@ -7,6 +7,7 @@ import NewsNumber from './Components/NewsNumber/NewsNumber';
 
 
 function App() {
+  let count =1;
   const [articles, setArticles]=useState([]);
   // console.log(articles);
   useEffect(()=> {
@@ -18,10 +19,10 @@ function App() {
   return (
     
     <>
-    <NewsNumber articles={articles}></NewsNumber>
+    <NewsNumber  articles={articles}></NewsNumber>
     <div className="news-color">
       {
-        articles.map(article=> <Header  article={article} ></Header>)
+        articles.map(article=> <Header count={count++} article={article} ></Header>)
       }
       </div>
       

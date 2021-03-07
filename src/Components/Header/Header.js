@@ -15,6 +15,7 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
+
 const useStyles = makeStyles((theme) => ({
     root: {
       maxWidth: 345,
@@ -37,22 +38,23 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: red[500],
     },
   }));
-  
 const Header = (props) => {
+  let count = props.count;
     const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
     // console.log(props);
     const {title,description,publishedAt,urlToImage}=props.article;
   const handleExpandClick = () => {
     setExpanded(!expanded);
+   
   };
-
+ 
     return (
         <Card style={{margin:'5px',backgroundColor:'gray'}} className={classes.root}>
       <CardHeader style={{height:'120px'}}
         avatar={
           <Avatar aria-label="recipe" className={classes.avatar}>
-            R
+            {count}
           </Avatar>
         }
         action={
@@ -108,6 +110,7 @@ const Header = (props) => {
       </Collapse>
     </Card>
     );
+    
 };
 
 export default Header;
